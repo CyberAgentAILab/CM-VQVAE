@@ -22,6 +22,8 @@ sudo apt-get install ffmpeg libsm6 libxext6  -y
 
 - Finally, go to CM-VQVAE/CREMA-D and run
 
+~~~
 python main.py
+~~~
 
 - A manual of the code and functions can be found in CM-VQVAE/CREMA-D/README.md
