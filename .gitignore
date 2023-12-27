@@ -1,0 +1,11 @@
+# Ignore Mac system files
+.DS_store
+
+# Ignore iPython folders
+.ipynb_checkpoints
+
+# Ignore pycache folders
+__pycache__
+
+# Ignore all text files
+*.pkl

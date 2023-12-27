@@ -184,7 +184,7 @@ class CREMADDataset(Dataset):
     def __getitem__(self, idx):
         #frames, waveform, info = read_video(self.video_path[idx])
         #DEBUGvideo = join('/home/jovyan/data/datasets/CREMA-D/CREMA-D/VideoFlash', self.video_path[idx].rsplit('/', 1)[-1])
-        clip = VideoFileClip(join('..',self.video_path[idx]))
+        clip = VideoFileClip(self.video_path[idx])
         stereo = clip.audio.to_soundarray()
         
         n_frames = clip.reader.nframes
