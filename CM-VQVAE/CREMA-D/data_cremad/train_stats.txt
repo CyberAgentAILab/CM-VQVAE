@@ -1,0 +1,143 @@
+
+* actor
+- Class 01: 67 samples, 1.13 %
+- Class 02: 63 samples, 1.06 %
+- Class 03: 63 samples, 1.06 %
+- Class 04: 63 samples, 1.06 %
+- Class 05: 60 samples, 1.01 %
+- Class 06: 71 samples, 1.19 %
+- Class 07: 62 samples, 1.04 %
+- Class 08: 62 samples, 1.04 %
+- Class 09: 59 samples, 0.99 %
+- Class 10: 62 samples, 1.04 %
+- Class 11: 65 samples, 1.09 %
+- Class 12: 61 samples, 1.02 %
+- Class 13: 70 samples, 1.18 %
+- Class 14: 67 samples, 1.13 %
+- Class 15: 61 samples, 1.02 %
+- Class 16: 61 samples, 1.02 %
+- Class 17: 72 samples, 1.21 %
+- Class 18: 67 samples, 1.13 %
+- Class 19: 67 samples, 1.13 %
+- Class 20: 62 samples, 1.04 %
+- Class 21: 60 samples, 1.01 %
+- Class 22: 63 samples, 1.06 %
+- Class 23: 62 samples, 1.04 %
+- Class 24: 70 samples, 1.18 %
+- Class 25: 69 samples, 1.16 %
+- Class 26: 65 samples, 1.09 %
+- Class 27: 62 samples, 1.04 %
+- Class 28: 68 samples, 1.14 %
+- Class 29: 70 samples, 1.18 %
+- Class 30: 67 samples, 1.13 %
+- Class 31: 68 samples, 1.14 %
+- Class 32: 65 samples, 1.09 %
+- Class 33: 72 samples, 1.21 %
+- Class 34: 66 samples, 1.11 %
+- Class 35: 64 samples, 1.07 %
+- Class 36: 69 samples, 1.16 %
+- Class 37: 69 samples, 1.16 %
+- Class 38: 67 samples, 1.13 %
+- Class 39: 69 samples, 1.16 %
+- Class 40: 68 samples, 1.14 %
+- Class 41: 62 samples, 1.04 %
+- Class 42: 66 samples, 1.11 %
+- Class 43: 62 samples, 1.04 %
+- Class 44: 69 samples, 1.16 %
+- Class 45: 67 samples, 1.13 %
+- Class 46: 62 samples, 1.04 %
+- Class 47: 69 samples, 1.16 %
+- Class 48: 61 samples, 1.02 %
+- Class 49: 66 samples, 1.11 %
+- Class 50: 64 samples, 1.07 %
+- Class 51: 68 samples, 1.14 %
+- Class 52: 66 samples, 1.11 %
+- Class 53: 71 samples, 1.19 %
+- Class 54: 68 samples, 1.14 %
+- Class 55: 70 samples, 1.18 %
+- Class 56: 67 samples, 1.13 %
+- Class 57: 63 samples, 1.06 %
+- Class 58: 72 samples, 1.21 %
+- Class 59: 69 samples, 1.16 %
+- Class 60: 65 samples, 1.09 %
+- Class 61: 70 samples, 1.18 %
+- Class 62: 67 samples, 1.13 %
+- Class 63: 65 samples, 1.09 %
+- Class 64: 61 samples, 1.02 %
+- Class 65: 65 samples, 1.09 %
+- Class 66: 64 samples, 1.07 %
+- Class 67: 63 samples, 1.06 %
+- Class 68: 72 samples, 1.21 %
+- Class 69: 65 samples, 1.09 %
+- Class 70: 66 samples, 1.11 %
+- Class 71: 61 samples, 1.02 %
+- Class 72: 62 samples, 1.04 %
+- Class 73: 68 samples, 1.14 %
+- Class 74: 67 samples, 1.13 %
+- Class 75: 68 samples, 1.14 %
+- Class 76: 64 samples, 1.07 %
+- Class 77: 65 samples, 1.09 %
+- Class 78: 63 samples, 1.06 %
+- Class 79: 67 samples, 1.13 %
+- Class 80: 66 samples, 1.11 %
+- Class 81: 64 samples, 1.07 %
+- Class 82: 65 samples, 1.09 %
+- Class 83: 67 samples, 1.13 %
+- Class 84: 72 samples, 1.21 %
+- Class 85: 63 samples, 1.06 %
+- Class 86: 52 samples, 0.87 %
+- Class 87: 62 samples, 1.04 %
+- Class 88: 63 samples, 1.06 %
+- Class 89: 59 samples, 0.99 %
+- Class 90: 64 samples, 1.07 %
+- Class 91: 69 samples, 1.16 %
+Total actor train samples: 5954
+* sentence
+- Class IEO: 1167 samples, 19.60 %
+- Class TIE: 444 samples, 7.46 %
+- Class IOM: 429 samples, 7.21 %
+- Class IWW: 441 samples, 7.41 %
+- Class TAI: 425 samples, 7.14 %
+- Class MTI: 411 samples, 6.90 %
+- Class IWL: 451 samples, 7.57 %
+- Class ITH: 429 samples, 7.21 %
+- Class DFA: 454 samples, 7.63 %
+- Class ITS: 436 samples, 7.32 %
+- Class TSI: 446 samples, 7.49 %
+- Class WSI: 421 samples, 7.07 %
+Total sentence train samples: 5954
+* emo
+- Class ANG: 1029 samples, 17.28 %
+- Class DIS: 1019 samples, 17.11 %
+- Class FEA: 1012 samples, 17.00 %
+- Class HAP: 1037 samples, 17.42 %
+- Class NEU: 847 samples, 14.23 %
+- Class SAD: 1010 samples, 16.96 %
+Total emo train samples: 5954
+* level
+- Class LO: 375 samples, 6.30 %
+- Class MD: 355 samples, 5.96 %
+- Class HI: 369 samples, 6.20 %
+- Class XX: 4855 samples, 81.54 %
+Total level train samples: 5954
+* age
+- Class 20s: 2198 samples, 36.92 %
+- Class 30s: 1502 samples, 25.23 %
+- Class 40s: 1064 samples, 17.87 %
+- Class 50s: 812 samples, 13.64 %
+- Class 60s: 378 samples, 6.35 %
+Total age train samples: 5954
+* gender
+- Class Male: 3119 samples, 52.38 %
+- Class Female: 2835 samples, 47.62 %
+Total gender train samples: 5954
+* race
+- Class African American: 1453 samples, 24.40 %
+- Class Asian: 456 samples, 7.66 %
+- Class Caucasian: 3976 samples, 66.78 %
+- Class Unknown: 69 samples, 1.16 %
+Total race train samples: 5954
+* ethnic
+- Class Not Hispanic: 5294 samples, 88.92 %
+- Class Hispanic: 660 samples, 11.08 %
+Total ethnic train samples: 5954

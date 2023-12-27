@@ -1,0 +1,446 @@
+Proposed method in the CREMAD dataset with regularization
+
+Model saved in epoch 41:
+CONFIG:
+- Dataset: CREMAD
+- Pretrained: False
+- Data path: data_cremad
+- Balanced: False
+- Num epoch: 50
+- Batch size: 128
+- Learning rate: 0.001
+- Num hiddens: 128
+- Num residual hiddens: 32
+- Num residual layers: 2
+- Embedding dimension: 64
+- Num embeddings: 512
+- Commitment cost: 0.25
+- Decay: 0.99
+- Mask init: 1s
+- Mask scale: 0.01
+- Threshold function: binarizer
+- Threshold: None
+- Regularization: True
+*** INITIAL PRIVATE SHARED SPACE ***
+-Private 1 ratio: 0.0
+-Private 2 ratio: 0.0
+-Shared 1 ratio: 50.0
+-Shared 2 ratio: 50.0
+
+*** TRAINING ***
+* Epoch 1 - Classification error: 1.573353298166965
+Image - Reconstruction error: 0.07948239930370386, Perplexity: 8.12990476730022
+Audio - Reconstruction error: 2926.104886968085, Perplexity: 8.382934113766284
+Latent space: Private 1 19.53125, Private 2 10.15625, Shared 1 30.46875, Shared 2 39.84375
+* Validation - Classification error: 1.4511666893959045
+Image - Reconstruction error: 0.008599436065802971, Perplexity: 8.12270212173462
+Audio - Reconstruction error: 2727.5296630859375, Perplexity: 9.31040334701538
+
+* Epoch 2 - Classification error: 1.437386951547988
+Image - Reconstruction error: 0.006739968126837878, Perplexity: 8.444651360207416
+Audio - Reconstruction error: 2525.702382189162, Perplexity: 10.137094071570862
+Latent space: Private 1 32.8125, Private 2 15.625, Shared 1 17.1875, Shared 2 34.375
+* Validation - Classification error: 1.398664951324463
+Image - Reconstruction error: 0.0059447862052669125, Perplexity: 8.698981444040934
+Audio - Reconstruction error: 2374.417236328125, Perplexity: 10.854747454325357
+
+* Epoch 3 - Classification error: 1.371678240755771
+Image - Reconstruction error: 0.005353428007281841, Perplexity: 8.58684253692627
+Audio - Reconstruction error: 2061.0589651554187, Perplexity: 11.520931568551571
+Latent space: Private 1 32.03125, Private 2 16.40625, Shared 1 17.96875, Shared 2 33.59375
+* Validation - Classification error: 1.3065832058588664
+Image - Reconstruction error: 0.0050690997547159595, Perplexity: 8.660476684570312
+Audio - Reconstruction error: 1917.8978068033855, Perplexity: 11.703344027201334
+
+* Epoch 4 - Classification error: 1.3285450656363305
+Image - Reconstruction error: 0.004823929689666058, Perplexity: 8.911640552764243
+Audio - Reconstruction error: 1571.4541015625, Perplexity: 13.408322800981237
+Latent space: Private 1 34.375, Private 2 22.65625, Shared 1 15.625, Shared 2 27.34375
+* Validation - Classification error: 1.3886596361796062
+Image - Reconstruction error: 0.004840110273410876, Perplexity: 8.96911096572876
+Audio - Reconstruction error: 1504.5072021484375, Perplexity: 12.554306189219156
+
+* Epoch 5 - Classification error: 1.2920164782950219
+Image - Reconstruction error: 0.004487094489183832, Perplexity: 8.963572928246032
+Audio - Reconstruction error: 1106.6623080639129, Perplexity: 15.104604558741793
+Latent space: Private 1 34.375, Private 2 25.0, Shared 1 15.625, Shared 2 25.0
+* Validation - Classification error: 1.4750430981318157
+Image - Reconstruction error: 0.004323833078766863, Perplexity: 8.99502944946289
+Audio - Reconstruction error: 957.8860066731771, Perplexity: 18.214316368103027
+
+* Epoch 6 - Classification error: 1.2412805531887299
+Image - Reconstruction error: 0.004345196725285434, Perplexity: 8.972225189208984
+Audio - Reconstruction error: 727.8698470744681, Perplexity: 19.403175110512592
+Latent space: Private 1 36.71875, Private 2 28.125, Shared 1 13.28125, Shared 2 21.875
+* Validation - Classification error: 1.225070317586263
+Image - Reconstruction error: 0.004390089772641659, Perplexity: 8.28556203842163
+Audio - Reconstruction error: 587.9573465983073, Perplexity: 20.665281931559246
+
+* Epoch 7 - Classification error: 1.2212574025417895
+Image - Reconstruction error: 0.004114790670970019, Perplexity: 8.891526648338806
+Audio - Reconstruction error: 441.64018866356383, Perplexity: 20.44670218609749
+Latent space: Private 1 35.9375, Private 2 27.34375, Shared 1 14.0625, Shared 2 22.65625
+* Validation - Classification error: 1.3063644170761108
+Image - Reconstruction error: 0.00385564798489213, Perplexity: 8.87265412012736
+Audio - Reconstruction error: 394.8362579345703, Perplexity: 21.572296142578125
+
+* Epoch 8 - Classification error: 1.18551120098601
+Image - Reconstruction error: 0.003805030830838579, Perplexity: 9.009035962693234
+Audio - Reconstruction error: 249.22916818172374, Perplexity: 20.493167187305207
+Latent space: Private 1 36.71875, Private 2 32.03125, Shared 1 13.28125, Shared 2 17.96875
+* Validation - Classification error: 1.2389921148618062
+Image - Reconstruction error: 0.004093279285977284, Perplexity: 9.148050467173258
+Audio - Reconstruction error: 217.85948435465494, Perplexity: 21.033379236857098
+
+* Epoch 9 - Classification error: 1.152150033636296
+Image - Reconstruction error: 0.0037479324444652873, Perplexity: 9.032102848621125
+Audio - Reconstruction error: 136.52295051737033, Perplexity: 19.51457222471846
+Latent space: Private 1 35.9375, Private 2 32.8125, Shared 1 14.0625, Shared 2 17.1875
+* Validation - Classification error: 1.4242912530899048
+Image - Reconstruction error: 0.0038828488904982805, Perplexity: 8.930518309275309
+Audio - Reconstruction error: 242.37998708089194, Perplexity: 17.314163208007812
+
+* Epoch 10 - Classification error: 1.1285051893680653
+Image - Reconstruction error: 0.00386665039200415, Perplexity: 8.866194197472106
+Audio - Reconstruction error: 78.60270268866357, Perplexity: 19.78415460789457
+Latent space: Private 1 35.9375, Private 2 31.25, Shared 1 14.0625, Shared 2 18.75
+* Validation - Classification error: 1.2280291120211284
+Image - Reconstruction error: 0.006527426652610302, Perplexity: 6.291623592376709
+Audio - Reconstruction error: 52.278448740641274, Perplexity: 18.854677200317383
+
+* Epoch 11 - Classification error: 1.112089233195528
+Image - Reconstruction error: 0.003922754066421631, Perplexity: 8.985962583663616
+Audio - Reconstruction error: 52.587286198392825, Perplexity: 22.670030877945273
+Latent space: Private 1 35.15625, Private 2 37.5, Shared 1 14.84375, Shared 2 12.5
+* Validation - Classification error: 1.1386275887489319
+Image - Reconstruction error: 0.005180394509807229, Perplexity: 8.607965151468912
+Audio - Reconstruction error: 51.87576166788737, Perplexity: 23.038624445597332
+
+* Epoch 12 - Classification error: 1.0799601268261037
+Image - Reconstruction error: 0.0036655727803627863, Perplexity: 8.971893087346503
+Audio - Reconstruction error: 40.3455175846181, Perplexity: 23.953747526128243
+Latent space: Private 1 35.9375, Private 2 32.8125, Shared 1 14.0625, Shared 2 17.1875
+* Validation - Classification error: 1.1351238389809926
+Image - Reconstruction error: 0.004341494524851441, Perplexity: 8.929105440775553
+Audio - Reconstruction error: 41.407772064208984, Perplexity: 24.85392157236735
+
+* Epoch 13 - Classification error: 1.0548917613130935
+Image - Reconstruction error: 0.003506887183980422, Perplexity: 9.007244059380065
+Audio - Reconstruction error: 34.81732149327055, Perplexity: 25.618141336643948
+Latent space: Private 1 36.71875, Private 2 35.9375, Shared 1 13.28125, Shared 2 14.0625
+* Validation - Classification error: 1.1515091061592102
+Image - Reconstruction error: 0.004318473006909092, Perplexity: 7.558896700541179
+Audio - Reconstruction error: 33.40311813354492, Perplexity: 26.947476069132488
+
+* Epoch 14 - Classification error: 1.0219420663853909
+Image - Reconstruction error: 0.003588625304202767, Perplexity: 9.075205194189193
+Audio - Reconstruction error: 31.661852491662856, Perplexity: 28.41505058775557
+Latent space: Private 1 36.71875, Private 2 35.9375, Shared 1 13.28125, Shared 2 14.0625
+* Validation - Classification error: 1.1811570127805073
+Image - Reconstruction error: 0.0035583962065478167, Perplexity: 8.740504264831543
+Audio - Reconstruction error: 31.106751759847004, Perplexity: 31.110137621561687
+
+* Epoch 15 - Classification error: 0.9961458102185675
+Image - Reconstruction error: 0.003494821097503634, Perplexity: 9.045095321979929
+Audio - Reconstruction error: 28.900248588399684, Perplexity: 32.64967829115847
+Latent space: Private 1 35.9375, Private 2 35.15625, Shared 1 14.0625, Shared 2 14.84375
+* Validation - Classification error: 1.1476094524065654
+Image - Reconstruction error: 0.0035201587015762925, Perplexity: 9.133107503255209
+Audio - Reconstruction error: 28.875856081644695, Perplexity: 34.295397440592446
+
+* Epoch 16 - Classification error: 0.9821026997363314
+Image - Reconstruction error: 0.0037133455960119657, Perplexity: 9.166774039572857
+Audio - Reconstruction error: 27.39045930416026, Perplexity: 38.82376285309487
+Latent space: Private 1 36.71875, Private 2 33.59375, Shared 1 13.28125, Shared 2 16.40625
+* Validation - Classification error: 1.2415684461593628
+Image - Reconstruction error: 0.004016102485669156, Perplexity: 9.833361943562826
+Audio - Reconstruction error: 26.776034037272137, Perplexity: 43.848934173583984
+
+* Epoch 17 - Classification error: 0.9582257080585399
+Image - Reconstruction error: 0.003938433070211334, Perplexity: 10.558211488926665
+Audio - Reconstruction error: 26.85867187824655, Perplexity: 48.34279470240816
+Latent space: Private 1 36.71875, Private 2 33.59375, Shared 1 13.28125, Shared 2 16.40625
+* Validation - Classification error: 1.2425408363342285
+Image - Reconstruction error: 0.011492640400926271, Perplexity: 10.874493598937988
+Audio - Reconstruction error: 27.77204958597819, Perplexity: 53.91221809387207
+
+* Epoch 18 - Classification error: 0.9334828156106015
+Image - Reconstruction error: 0.004332074499193659, Perplexity: 13.779018645590924
+Audio - Reconstruction error: 25.559054638477082, Perplexity: 58.57551964293135
+Latent space: Private 1 36.71875, Private 2 32.8125, Shared 1 13.28125, Shared 2 17.1875
+* Validation - Classification error: 1.1522988478342693
+Image - Reconstruction error: 0.005060981105392178, Perplexity: 16.95973777770996
+Audio - Reconstruction error: 24.763318061828613, Perplexity: 63.68994458516439
+
+* Epoch 19 - Classification error: 0.8828144720260133
+Image - Reconstruction error: 0.003739271892551729, Perplexity: 20.73991641592472
+Audio - Reconstruction error: 25.161801723723716, Perplexity: 66.73542306778279
+Latent space: Private 1 36.71875, Private 2 32.8125, Shared 1 13.28125, Shared 2 17.1875
+* Validation - Classification error: 1.1190535028775532
+Image - Reconstruction error: 0.004329973986993234, Perplexity: 23.132869720458984
+Audio - Reconstruction error: 24.467240969340008, Perplexity: 72.76723607381184
+
+* Epoch 20 - Classification error: 0.8656617009893377
+Image - Reconstruction error: 0.0038011668973225864, Perplexity: 32.52888135707125
+Audio - Reconstruction error: 24.186190747200175, Perplexity: 73.17103008513755
+Latent space: Private 1 36.71875, Private 2 34.375, Shared 1 13.28125, Shared 2 15.625
+* Validation - Classification error: 1.2162471810976665
+Image - Reconstruction error: 0.004247523999462525, Perplexity: 32.101439476013184
+Audio - Reconstruction error: 23.9599707921346, Perplexity: 72.85043462117513
+
+* Epoch 21 - Classification error: 0.8426425862819591
+Image - Reconstruction error: 0.0041389278373978235, Perplexity: 42.86064269694876
+Audio - Reconstruction error: 23.835401656779837, Perplexity: 79.16821581252078
+Latent space: Private 1 36.71875, Private 2 32.8125, Shared 1 13.28125, Shared 2 17.1875
+* Validation - Classification error: 1.1194677154223125
+Image - Reconstruction error: 0.003958184466076394, Perplexity: 44.62468719482422
+Audio - Reconstruction error: 23.525580724080402, Perplexity: 82.44195048014323
+
+* Epoch 22 - Classification error: 0.8215560481903401
+Image - Reconstruction error: 0.003913737679930761, Perplexity: 49.389780328628866
+Audio - Reconstruction error: 23.742828247394968, Perplexity: 85.37375494774352
+Latent space: Private 1 36.71875, Private 2 32.8125, Shared 1 13.28125, Shared 2 17.1875
+* Validation - Classification error: 1.0867045521736145
+Image - Reconstruction error: 0.0035467963510503373, Perplexity: 59.023237228393555
+Audio - Reconstruction error: 23.349528948465984, Perplexity: 89.76224899291992
+
+* Epoch 23 - Classification error: 0.7846024454908168
+Image - Reconstruction error: 0.0034109339801634245, Perplexity: 56.93984465903424
+Audio - Reconstruction error: 23.192127227783203, Perplexity: 90.23523939416764
+Latent space: Private 1 36.71875, Private 2 31.25, Shared 1 13.28125, Shared 2 18.75
+* Validation - Classification error: 1.2420525153477986
+Image - Reconstruction error: 0.004837850574404001, Perplexity: 46.71857198079427
+Audio - Reconstruction error: 24.09362030029297, Perplexity: 91.22271474202473
+
+* Epoch 24 - Classification error: 0.769290807399344
+Image - Reconstruction error: 0.003221244645364424, Perplexity: 67.02384591609874
+Audio - Reconstruction error: 23.105465097630276, Perplexity: 96.30583369478266
+Latent space: Private 1 36.71875, Private 2 35.9375, Shared 1 13.28125, Shared 2 14.0625
+* Validation - Classification error: 1.08243989944458
+Image - Reconstruction error: 0.003942944885541995, Perplexity: 55.62873395284017
+Audio - Reconstruction error: 22.697647412618, Perplexity: 98.00160853068034
+
+* Epoch 25 - Classification error: 0.718879575425006
+Image - Reconstruction error: 0.0035354373332588595, Perplexity: 73.42901660026388
+Audio - Reconstruction error: 22.81208910840623, Perplexity: 100.76195039140417
+Latent space: Private 1 36.71875, Private 2 32.8125, Shared 1 13.28125, Shared 2 17.1875
+* Validation - Classification error: 1.0412951807181041
+Image - Reconstruction error: 0.0037411376057813563, Perplexity: 70.38528315226237
+Audio - Reconstruction error: 23.424941380818684, Perplexity: 98.13795471191406
+
+* Epoch 26 - Classification error: 0.7135077512010615
+Image - Reconstruction error: 0.003344431306493092, Perplexity: 77.58402917740193
+Audio - Reconstruction error: 22.99973082035146, Perplexity: 107.01489777260639
+Latent space: Private 1 36.71875, Private 2 33.59375, Shared 1 13.28125, Shared 2 16.40625
+* Validation - Classification error: 1.0859419405460358
+Image - Reconstruction error: 0.003968248415427904, Perplexity: 62.5447572072347
+Audio - Reconstruction error: 22.59518559773763, Perplexity: 107.19648996988933
+
+* Epoch 27 - Classification error: 0.6664222123775077
+Image - Reconstruction error: 0.0038587242077560502, Perplexity: 71.80387066780253
+Audio - Reconstruction error: 22.299064189829725, Perplexity: 111.6063998607879
+Latent space: Private 1 36.71875, Private 2 32.03125, Shared 1 13.28125, Shared 2 17.96875
+* Validation - Classification error: 1.2282032271226246
+Image - Reconstruction error: 0.0039001387000704804, Perplexity: 73.39321009318034
+Audio - Reconstruction error: 23.330451011657715, Perplexity: 112.94185384114583
+
+* Epoch 28 - Classification error: 0.667563556356633
+Image - Reconstruction error: 0.003631566235042633, Perplexity: 79.08619219191532
+Audio - Reconstruction error: 22.409217590981342, Perplexity: 117.78545752992021
+Latent space: Private 1 36.71875, Private 2 35.15625, Shared 1 13.28125, Shared 2 14.84375
+* Validation - Classification error: 1.1822547713915508
+Image - Reconstruction error: 0.004971631336957216, Perplexity: 71.47298177083333
+Audio - Reconstruction error: 22.38754717508952, Perplexity: 121.14581680297852
+
+* Epoch 29 - Classification error: 0.6157270213390919
+Image - Reconstruction error: 0.0033105490134751545, Perplexity: 84.19567578904172
+Audio - Reconstruction error: 22.007798255758082, Perplexity: 123.52556285452336
+Latent space: Private 1 36.71875, Private 2 35.9375, Shared 1 13.28125, Shared 2 14.0625
+* Validation - Classification error: 1.1039154330889385
+Image - Reconstruction error: 0.0032122129341587424, Perplexity: 88.25161488850911
+Audio - Reconstruction error: 22.81848971048991, Perplexity: 129.0883534749349
+
+* Epoch 30 - Classification error: 0.5980742611783616
+Image - Reconstruction error: 0.0030645152573731353, Perplexity: 88.18888497859874
+Audio - Reconstruction error: 21.86908827436731, Perplexity: 127.93573501262259
+Latent space: Private 1 36.71875, Private 2 35.9375, Shared 1 13.28125, Shared 2 14.0625
+* Validation - Classification error: 1.2160091996192932
+Image - Reconstruction error: 0.004623866717641552, Perplexity: 80.32742055257161
+Audio - Reconstruction error: 22.296123186747234, Perplexity: 124.07902145385742
+
+* Epoch 31 - Classification error: 0.5831924581781347
+Image - Reconstruction error: 0.0030282798143935964, Perplexity: 90.69064558313248
+Audio - Reconstruction error: 21.996808112935817, Perplexity: 133.25266379498422
+Latent space: Private 1 36.71875, Private 2 34.375, Shared 1 13.28125, Shared 2 15.625
+* Validation - Classification error: 1.299424648284912
+Image - Reconstruction error: 0.0033391449445237717, Perplexity: 93.30553309122722
+Audio - Reconstruction error: 22.158934275309246, Perplexity: 129.71083068847656
+
+* Epoch 32 - Classification error: 0.5759873402879593
+Image - Reconstruction error: 0.0031678418906286674, Perplexity: 92.56692586046584
+Audio - Reconstruction error: 21.71576276738593, Perplexity: 139.0273554375831
+Latent space: Private 1 36.71875, Private 2 33.59375, Shared 1 13.28125, Shared 2 16.40625
+* Validation - Classification error: 1.1296535631020863
+Image - Reconstruction error: 0.0033420405816286802, Perplexity: 95.26437377929688
+Audio - Reconstruction error: 22.570597012837727, Perplexity: 139.58167521158853
+
+* Epoch 33 - Classification error: 0.5620372713880336
+Image - Reconstruction error: 0.0029117458826921723, Perplexity: 96.96883554661528
+Audio - Reconstruction error: 21.514951503023187, Perplexity: 143.92813921989278
+Latent space: Private 1 36.71875, Private 2 34.375, Shared 1 13.28125, Shared 2 15.625
+* Validation - Classification error: 1.141799549261729
+Image - Reconstruction error: 0.003550849350479742, Perplexity: 92.96244557698567
+Audio - Reconstruction error: 21.61937363942464, Perplexity: 153.49506632486978
+
+* Epoch 34 - Classification error: 0.5518279652646247
+Image - Reconstruction error: 0.0029646185613138244, Perplexity: 99.74044816037441
+Audio - Reconstruction error: 21.50670920027063, Perplexity: 150.1117852393617
+Latent space: Private 1 36.71875, Private 2 32.8125, Shared 1 13.28125, Shared 2 17.1875
+* Validation - Classification error: 1.1255979339281719
+Image - Reconstruction error: 0.0029478647047653794, Perplexity: 97.02574920654297
+Audio - Reconstruction error: 21.317351977030437, Perplexity: 158.6898422241211
+
+* Epoch 35 - Classification error: 0.5330198984196846
+Image - Reconstruction error: 0.002910011160643177, Perplexity: 101.70285991912192
+Audio - Reconstruction error: 21.365674850788523, Perplexity: 156.80090656686338
+Latent space: Private 1 36.71875, Private 2 36.71875, Shared 1 13.28125, Shared 2 13.28125
+* Validation - Classification error: 1.14801687002182
+Image - Reconstruction error: 0.002895154097738365, Perplexity: 95.29015223185222
+Audio - Reconstruction error: 21.270554542541504, Perplexity: 158.50881958007812
+
+* Epoch 36 - Classification error: 0.5025299965067113
+Image - Reconstruction error: 0.0029434049502015114, Perplexity: 112.55523340752784
+Audio - Reconstruction error: 20.98399669566053, Perplexity: 162.8218851292387
+Latent space: Private 1 36.71875, Private 2 35.9375, Shared 1 13.28125, Shared 2 14.0625
+* Validation - Classification error: 1.0755553841590881
+Image - Reconstruction error: 0.003863863142517706, Perplexity: 106.10778427124023
+Audio - Reconstruction error: 20.730287233988445, Perplexity: 165.92574564615884
+
+* Epoch 37 - Classification error: 0.49429080397524733
+Image - Reconstruction error: 0.002789348467907056, Perplexity: 112.89660579600233
+Audio - Reconstruction error: 21.1664024109536, Perplexity: 169.09055539394947
+Latent space: Private 1 36.71875, Private 2 34.375, Shared 1 13.28125, Shared 2 15.625
+* Validation - Classification error: 1.1080061097939808
+Image - Reconstruction error: 0.0038987951508412757, Perplexity: 113.46679941813152
+Audio - Reconstruction error: 21.033808708190918, Perplexity: 174.39615376790366
+
+* Epoch 38 - Classification error: 0.4837965045837646
+Image - Reconstruction error: 0.0027610378270532857, Perplexity: 114.61457840939785
+Audio - Reconstruction error: 20.91819848405554, Perplexity: 175.9873692938622
+Latent space: Private 1 36.71875, Private 2 32.8125, Shared 1 13.28125, Shared 2 17.1875
+* Validation - Classification error: 1.1184783081213634
+Image - Reconstruction error: 0.0032045369734987617, Perplexity: 107.01560084025066
+Audio - Reconstruction error: 20.562512397766113, Perplexity: 180.8184026082357
+
+* Epoch 39 - Classification error: 0.45645036849569764
+Image - Reconstruction error: 0.0027013418581733045, Perplexity: 125.4777677820084
+Audio - Reconstruction error: 20.76846820750135, Perplexity: 182.97035087423123
+Latent space: Private 1 36.71875, Private 2 32.8125, Shared 1 13.28125, Shared 2 17.1875
+* Validation - Classification error: 1.0545945167541504
+Image - Reconstruction error: 0.0033714823657646775, Perplexity: 100.75607554117839
+Audio - Reconstruction error: 20.52442677815755, Perplexity: 185.18389892578125
+
+* Epoch 40 - Classification error: 0.46451048014011787
+Image - Reconstruction error: 0.00256632397228733, Perplexity: 122.02013754337392
+Audio - Reconstruction error: 20.39319996123618, Perplexity: 189.54380733408826
+Latent space: Private 1 36.71875, Private 2 32.8125, Shared 1 13.28125, Shared 2 17.1875
+* Validation - Classification error: 1.1020869414011638
+Image - Reconstruction error: 0.0027301035976658263, Perplexity: 116.16735458374023
+Audio - Reconstruction error: 20.628785451253254, Perplexity: 191.37217458089194
+
+* Epoch 41 - Classification error: 0.45726186100472793
+Image - Reconstruction error: 0.002593624910854913, Perplexity: 119.85618818567154
+Audio - Reconstruction error: 20.942754664319626, Perplexity: 196.48050381274933
+Latent space: Private 1 36.71875, Private 2 36.71875, Shared 1 13.28125, Shared 2 13.28125
+* Validation - Classification error: 0.990086187918981
+Image - Reconstruction error: 0.002812146907672286, Perplexity: 122.18251291910808
+Audio - Reconstruction error: 21.175267855326336, Perplexity: 201.94078318277994
+
+* Epoch 42 - Classification error: 0.4566867510054974
+Image - Reconstruction error: 0.0026929105750899364, Perplexity: 122.70754128314078
+Audio - Reconstruction error: 20.659321845845973, Perplexity: 205.20274255630818
+Latent space: Private 1 36.71875, Private 2 32.03125, Shared 1 13.28125, Shared 2 17.96875
+* Validation - Classification error: 1.0898419121901195
+Image - Reconstruction error: 0.0033678472585355244, Perplexity: 121.89419682820638
+Audio - Reconstruction error: 20.386858622233074, Perplexity: 208.0355707804362
+
+* Epoch 43 - Classification error: 0.4262134737156807
+Image - Reconstruction error: 0.002721845385360908, Perplexity: 129.18576910140666
+Audio - Reconstruction error: 20.47403538480718, Perplexity: 210.7214595713514
+Latent space: Private 1 36.71875, Private 2 35.15625, Shared 1 13.28125, Shared 2 14.84375
+* Validation - Classification error: 1.498153289159139
+Image - Reconstruction error: 0.002913235337473452, Perplexity: 129.39137268066406
+Audio - Reconstruction error: 20.32840855916341, Perplexity: 213.57127634684244
+
+* Epoch 44 - Classification error: 0.4218397539980868
+Image - Reconstruction error: 0.0025235261678933463, Perplexity: 132.37767807980802
+Audio - Reconstruction error: 20.133304230710294, Perplexity: 220.0862105349277
+Latent space: Private 1 36.71875, Private 2 31.25, Shared 1 13.28125, Shared 2 18.75
+* Validation - Classification error: 1.069031576315562
+Image - Reconstruction error: 0.0029893406123543778, Perplexity: 116.73952229817708
+Audio - Reconstruction error: 20.273385047912598, Perplexity: 223.61221313476562
+
+* Epoch 45 - Classification error: 0.42334681115251904
+Image - Reconstruction error: 0.002529867573026964, Perplexity: 131.40782051898063
+Audio - Reconstruction error: 20.219354142533973, Perplexity: 227.96977591007314
+Latent space: Private 1 36.71875, Private 2 35.15625, Shared 1 13.28125, Shared 2 14.84375
+* Validation - Classification error: 1.0984669824441273
+Image - Reconstruction error: 0.0029813058208674192, Perplexity: 124.30307006835938
+Audio - Reconstruction error: 20.4313907623291, Perplexity: 236.2732137044271
+
+* Epoch 46 - Classification error: 0.3953423005469302
+Image - Reconstruction error: 0.0026001149857852687, Perplexity: 135.1698812931142
+Audio - Reconstruction error: 20.292506644066343, Perplexity: 235.66686167615526
+Latent space: Private 1 36.71875, Private 2 33.59375, Shared 1 13.28125, Shared 2 16.40625
+* Validation - Classification error: 1.2251383264859517
+Image - Reconstruction error: 0.002526937246633073, Perplexity: 128.91199111938477
+Audio - Reconstruction error: 20.286400477091473, Perplexity: 228.89568837483725
+
+* Epoch 47 - Classification error: 0.38582386425200926
+Image - Reconstruction error: 0.0025435291537816854, Perplexity: 132.0700194987845
+Audio - Reconstruction error: 20.242060072878573, Perplexity: 245.4983705561212
+Latent space: Private 1 36.71875, Private 2 30.46875, Shared 1 13.28125, Shared 2 19.53125
+* Validation - Classification error: 1.1848451892534893
+Image - Reconstruction error: 0.0030949577145899334, Perplexity: 128.07439931233725
+Audio - Reconstruction error: 20.13194211324056, Perplexity: 240.02216084798178
+
+* Epoch 48 - Classification error: 0.3764457715318558
+Image - Reconstruction error: 0.002496780485826287, Perplexity: 137.0914254695811
+Audio - Reconstruction error: 20.06870257600825, Perplexity: 251.83555343303274
+Latent space: Private 1 36.71875, Private 2 32.8125, Shared 1 13.28125, Shared 2 17.1875
+* Validation - Classification error: 1.0726496676603954
+Image - Reconstruction error: 0.004234132046500842, Perplexity: 130.61402893066406
+Audio - Reconstruction error: 21.32246271769206, Perplexity: 260.93536885579425
+
+* Epoch 49 - Classification error: 0.3680128334684575
+Image - Reconstruction error: 0.002440789768947883, Perplexity: 142.85979023385556
+Audio - Reconstruction error: 19.90966951086166, Perplexity: 262.87901695738447
+Latent space: Private 1 36.71875, Private 2 34.375, Shared 1 13.28125, Shared 2 15.625
+* Validation - Classification error: 1.104904333750407
+Image - Reconstruction error: 0.0026023699125895896, Perplexity: 137.85644022623697
+Audio - Reconstruction error: 19.7117182413737, Perplexity: 272.1438344319661
+
+* Epoch 50 - Classification error: 0.3541146161708426
+Image - Reconstruction error: 0.002402827539976607, Perplexity: 140.92158118714678
+Audio - Reconstruction error: 19.736639266318463, Perplexity: 269.0647342763049
+Latent space: Private 1 36.71875, Private 2 34.375, Shared 1 13.28125, Shared 2 15.625
+* Validation - Classification error: 1.096463402112325
+Image - Reconstruction error: 0.002581869950518012, Perplexity: 132.82027943929037
+Audio - Reconstruction error: 19.53572368621826, Perplexity: 275.16603597005206
+
+*** EVALUATION ***
+Accuracy for class anger: 79.1304347826087
+Accuracy for class disgust: 58.46153846153846
+Accuracy for class fear: 36.69064748201439
+Accuracy for class happy: 80.34188034188034
+Accuracy for class neutral: 80.67226890756302
+Accuracy for class sad: 62.903225806451616
+System accuracy: 65.3225806451613
+
+*** LEARNED PRIVATE SHARED SPACE ***
+-Private 1 ratio: 36.71875
+-Private 2 ratio: 36.71875
+-Shared 1 ratio: 13.28125
+-Shared 2 ratio: 13.28125
+-Complementarity: 1.0
+
