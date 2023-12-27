@@ -7,5 +7,5 @@
 # Ignore pycache folders
 __pycache__
 
-# Ignore all text files
+# Ignore all pickle files
 *.pkl
