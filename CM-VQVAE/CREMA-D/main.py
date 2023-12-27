@@ -147,7 +147,7 @@ if __name__ == "__main__":
         BIAS_TRAIN = (train_loader.dataset.__len__() - 1) / (batch_size - 1)
         BIAS_VAL = (val_loader.dataset.__len__() - 1) / (batch_size - 1)
 
-        optimizer = optim.SGD(model.parameters(), lr=learning_rate)
+        optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
         if pretrained:
             pretrained_model.load_state_dict(torch.load('results/20220623-051044/model.pt'))

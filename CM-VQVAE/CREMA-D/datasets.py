@@ -21,8 +21,6 @@ from random import randint
 import numpy as np
 import pickle
 
-from modality_modifier import mod_face, mod_voice
-
 
 # https://pytorch.org/docs/stable/data.html
 # https://pytorch.org/tutorials/beginner/basics/data_tutorial.html
@@ -111,7 +109,7 @@ class RMLDataset(Dataset):
         image = frames[image_id,start_x:start_x+crop,start_y:start_y+crop,:]  # Crop a central area of 128x128
         image = image.permute(2,0,1)
         image = self.resize_image(image)
-        if self.modify_modal:
+        if False:
             _, image = mod_face(image)
         image = self.convert(image)
         
@@ -123,7 +121,7 @@ class RMLDataset(Dataset):
         else:
             waveform = waveform[0]
         subsampled = resample(waveform.type(float32), int(sample_rate), self.sub_sr)
-        if self.modify_modal:
+        if False:
             _, subsampled = mod_voice(subsampled, int(sample_rate))
         
         if self.pretrained:
@@ -186,7 +184,7 @@ class CREMADDataset(Dataset):
     def __getitem__(self, idx):
         #frames, waveform, info = read_video(self.video_path[idx])
         #DEBUGvideo = join('/home/jovyan/data/datasets/CREMA-D/CREMA-D/VideoFlash', self.video_path[idx].rsplit('/', 1)[-1])
-        clip = VideoFileClip(self.video_path[idx])
+        clip = VideoFileClip(join('..',self.video_path[idx]))
         stereo = clip.audio.to_soundarray()
         
         n_frames = clip.reader.nframes

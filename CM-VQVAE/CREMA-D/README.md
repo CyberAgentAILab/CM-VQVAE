@@ -2,23 +2,20 @@
 
 ## main.py
 
-This python program is called to run the experiments for "complementary/contradictory multimodal features" on the EmoVoxCeleb dataset. The configuration parameters can be selected by modifying the first lines of code (number of epochs, etc). In particular, for training:
+This python program is called to run the experiments for "complementary/contradictory multimodal features" on the CREMA-D dataset. The configuration parameters can be selected by modifying the first lines of code (number of epochs, etc). In particular, for training:
 
 - message: String to be recorded at the beginning of the log. Its purpose is to leave a brief description of the intentions of the experiment, so it is easier to distinguish its results from the others.
 
 - timestamp: If 'None', the training will be executed from scratch. If a value of the type '20220413-094829' is introduced, the corresponding learned model will be read from the results folder, and the evaluation will be executed (training is skipped).
 
-- dataset: It can take the values 'EmoVoxCeleb' or 'RML' or 'RML_feat'.
-    - EmoVoxCeleb: The large-scale EmoVoxCeleb dataset for emotion recognition
-    - RML: The small-scale RML dataset for emotion recognition
-    - RML_feat: The video (images) and audio features output by a pre-trained "strong" feature extractor when fed the RML dataset
-    - CREMAD: Emotion recognition dataset with actors of different genders and nationalities. It's larger than RML but smaller than EmoVoxCeleb.
+- dataset: Please use 'CREMAD'.
+    - CREMAD: Emotion recognition dataset with actors of different genders and nationalities.
 This variable is also input to the model to initialize the architecture. Depending on the dataset, the following variables will vary accordingly.
     - Dataset for the dataloader
     - Names of the labels
     - Loss function (criterion)
 
-- pretrained: This flag is used when using the RML dataset, as it does not have enough samples to successfully train our model. When set to True, the program will read a pretrained model (i.e., from EmoVoxCeleb) and replace the VQVAE modules from the RML model (encoder, decoder, codebook, etc). Also, since the EmoVoxCeleb model uses spectrograms of size 512x512 for the audio modality, this flag makes the dataset of RML spectrograms have the same size (see datasets.py).
+- pretrained: This flag is used when using the RML dataset, as it does not have enough samples to successfully train our model. When set to True, the program will read a pretrained model (i.e., from CREMAD) and replace the VQVAE modules from the RML model (encoder, decoder, codebook, etc). Also, since the CREMAD model uses spectrograms of size 512x512 for the audio modality, this flag makes the dataset of RML spectrograms have the same size (see datasets.py).
 
 - mode: It can take three possible values depending on the modalities that will be used for the experiment.
     - 'multimodal': Both modalities will be used to train/test the model
@@ -32,11 +29,11 @@ This variable is also input to the model to initialize the architecture. Dependi
     - 3: No reconstruction
 
 - data_path: Folder where the configuration necessary for data loading is stored. The folder contains configs for each split (train, val, test) and modality (see the details on the corresponding sections below). It can take the following values:
-    - 'data'
+    - 'data_cremad'
     - 'data_rml'
     - 'data_rml_by_user'
 
-- balanced: If True, the balanced version of the EmoVoxCeleb dataset will be used (only four classes are used, and the number of samples per-class is comparable).
+- balanced: This is deprecated, and the value should be False. If True, the balanced version of the CREMA dataset will be used (only four classes are used, and the number of samples per-class is comparable).
 
 - num_epoch: Training epochs. Recommended: 35 (10 if 'data_rml_by_user' due to overfitting)
 
@@ -46,7 +43,7 @@ This variable is also input to the model to initialize the architecture. Dependi
 
 - regularization: Add a regularization term to the loss to penalize masks with many '1' values
 
-- modify_modal: Adds irrelevant features (i.e., skin color) to the given task (emotion classification)
+- modify_modal: In the RML dataset, adds contradictory features (i.e., skin color) to the given task (emotion recognition)
 
 Compared to the model used for the Digits dataset, the sizes for the model architecture are larger, given the higher complexity of the task (emotion classification) and the dimensionality of the modalities. Also, the VAE architecture selection is not implemented, since experiments with the comparatively simpler Digits dataset showed that VAE is less suitable to this scenario than VQVAE.
 
@@ -62,16 +59,16 @@ Then, for evaluation, the predicted class with the highest probability and the l
 
 Finally, the learned private and shared spaces of each modality, as well as the modal complementarity are displayed. Then, the last batch of evaluation samples (originals and reconstructed) are saved.
 
-To summarize, executing the file results on a log, a set of result files (see the results folder explanation below) and a printed output (that is logged as well). These files can be visualized via the 'c-vqvae.ipynb' notebook.
+To summarize, executing the file results on a log, a set of result files (see the results folder explanation below) and a printed output (that is logged as well).
 
 ### read_variances.py
 
-This function reads the variances of the visual/audio modalities in the training data split. The variance values were calculated by the read_cremad.py, read_emo.py and read_rml.py for the CREMAD, EmoVoxCeleb and RML emotion datasets respectively.
+This function reads the variances of the visual/audio modalities in the training data split. The variance values were calculated by 'read_cremad.py'.
 
 
 ## datasets.py
 
-This python file implements a Dataset class that can be used by a data loader for the EmoVoxCeleb, RML or CREMA-D datasets.
+This python file implements a Dataset class that can be used by a data loader for the CREMA-D dataset.
 
 ### EmoVoxCelebDataset
 
@@ -115,7 +112,7 @@ Since the features extracted via 'pretrained_features_create' are obtained by pr
 
 ### RMLProbeDataset
 
-It adds "emotion irrelevant" class labels (i.e., skin color, voice pitch, user) to the RMLDataset class.
+It adds "emotion contradictory" class labels (i.e., skin color, voice pitch, user) to the RMLDataset class.
 
 ### CREMADDataset
 
@@ -269,6 +266,47 @@ This class implements a model based on two ResNet18 (one for each modality) as t
 This class is necessary to return dummy values for the private-shared space sizes of the Model_Comparison model (these values are not actually used).
 
 
+## read_cremad.py
+
+This python program reads the files of the CREMA-D dataset, and creates some configuration files that are used by the pytorch dataset class in order to load video and labels for the train/validation/test splits.
+
+First, the origin and destination folders are defined, as well as the number of samples per split. Then, the class names are defined for each label type. If the destination folder does not exist, it is created and configuration files are created for each split, and their class ratio printed.
+
+When creating config files, first, the samples are read from the dataset folder (see 'read_samples' function below). Then, for each split in the dataset, a configuration file is created (see 'create_config' function below) and the class ratios are calculated (see 'print_class_ratio' function below).
+
+Then, as some algorithms use the variance of the data in order to calculate the reconstruction loss, we also load the train split of the dataset to calculate this value. For this, we instantiate a dataset class of CREMA-D with the config files previously generated. We take all the training samples and read them at once. Finally, the max and variance values for each modality are printed out and saved in the 'data' folder:
+- train_image_var.pkl: Contains the variance of the image modality
+- train_audio_var.pkl: Contains the variance of the audio modality
+
+NOTE: The number of samples on each split is based on the used in: "Balanced Multimodal Learning via On-the-fly Gradient Modulation".
+
+### read_samples
+
+This function reads two configuration CSV files to extract the following information:
+- VideoDemographics.csv: Contains the age, gender, race and ethnicity of the actors.
+- SentenceFilenames.csv: Contains the names of the video files, which are added to the dataset root path.
+
+Then, the list of videos is randomly sorted.
+
+### create_config
+
+This function takes the path of the input videos and their labels, and creates a configuration file for the given split.
+
+For each video sample, first, the following labels are extracted from the file name: actor ID, sentence ID, emotion class and emotion level. Then, the video demographics info read above is also stored as labels. In this process, the number of labels for each class is counted, to calculate the class ratios as below.
+
+Finally, the paths of the video samples and their corresponding labels are stored.
+
+NOTE: Since there are faulty files in the dataset (four to our knowledge), we can decide to omit them for the experiments.
+
+### print_class_ratio
+
+For each label type (emotion, race, etc.) and for each class in the label type, the ratio of each class is calculated and printed to a file.
+
+### get_age_class
+
+Converts the input integer to a discrete label indicated by the closest multiple of 10 (e.g., 46 --> '40s').
+
+
 # Folders
 
 ## results
@@ -291,4 +329,4 @@ This folder contains the files resulting from training a model and its evaluatio
 
 ## data_cremad
 
-Folder with the files generated in 'read_cremad.py'(see above). These are, for each split, the video samples list and their respective labels, as well as the class ratios (stats). In addition, the modal-wise variance values for the train data are also stored.
+Folder with the files generated in 'read_cremad.py' (see above). These are, for each split, the video samples list and their respective labels, as well as the class ratios (stats). In addition, the modal-wise variance values for the train data are also stored.
