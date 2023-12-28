@@ -9,7 +9,7 @@ Here we provide the implementation ready-to-run for the emotion recognition data
 - First, install the dependencies in CM-VQVAE/requirements.txt
 
 ~~~
-pip3 install -U -r requirements.txt
+pip3 install -U -r CM-VQVAE/requirements.txt
 ~~~
 
 - Then, manually install the following packages:
