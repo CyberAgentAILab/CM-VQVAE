@@ -6,7 +6,7 @@ Here we provide the implementation ready-to-run for the emotion recognition data
 
 ## How to run
 
-- First, install the dependencies in CM-VQVAE/requirements.txt
+- First, install the dependencies in [CM-VQVAE/requirements.txt](CM-VQVAE/requirements.txt)
 
 ~~~
 pip3 install -U -r CM-VQVAE/requirements.txt
@@ -24,10 +24,10 @@ sudo apt-get install libgl1
 sudo apt-get install ffmpeg libsm6 libxext6  -y
 ~~~
 
-- Finally, go to CM-VQVAE/CREMA-D and run
+- Finally, go to [CM-VQVAE/CREMA-D](CM-VQVAE/CREMA-D) and run
 
 ~~~
 python main.py
 ~~~
 
-- A manual of the code and functions can be found in CM-VQVAE/CREMA-D/README.md
+- A manual of the code and functions can be found in [CM-VQVAE/CREMA-D/README.md](CM-VQVAE/CREMA-D/README.md)
