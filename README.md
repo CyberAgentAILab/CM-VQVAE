@@ -18,7 +18,7 @@ Here we provide the implementation ready-to-run for the emotion recognition data
 
 Now we have confirmed that the codebase works in our in-house runtime, and we will soon add the usage on other platforms.
 
-[comment]: <> (- First, install the dependencies in [CM-VQVAE/requirements.txt](CM-VQVAE/requirements.txt))
+[comment]: <> (- First, install the dependencies in [CM-VQVAE/requirements.txt]CM-VQVAE/requirements.txt)
 
 [comment]: <> (~~~)
 [comment]: <> (pip3 install -U -r CM-VQVAE/requirements.txt)
@@ -36,10 +36,10 @@ Now we have confirmed that the codebase works in our in-house runtime, and we wi
 [comment]: <> (sudo apt-get install ffmpeg libsm6 libxext6  -y)
 [comment]: <> (~~~)
 
-[comment]: <> (- Finally, go to [CM-VQVAE/CREMA-D](CM-VQVAE/CREMA-D) and run)
+[comment]: <> (- Finally, go to [CM-VQVAE/CREMA-D]CM-VQVAE/CREMA-D and run)
 
 [comment]: <> (~~~)
 [comment]: <> (python main.py)
 [comment]: <> (~~~)
 
-[comment]: <> (- A manual of the code and functions can be found in [CM-VQVAE/CREMA-D/README.md](CM-VQVAE/CREMA-D/README.md))
+[comment]: <> (- A manual of the code and functions can be found in [CM-VQVAE/CREMA-D/README.md]CM-VQVAE/CREMA-D/README.md)
