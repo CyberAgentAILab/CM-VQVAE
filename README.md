@@ -7,7 +7,7 @@ This is the research code for the WACV2024 paper "Complementary-Contradictory Fe
     title     = {Complementary-contradictory feature regularization against multimodal overfitting},
     author    = {Tejero-de-Pablos, Antonio},
     booktitle = {In Proc. Winter Conference on Applications of Computer Vision},
-    pages     = {1--10},
+    pages     = {5679-5688},
     year={2024}
 }
 ```
