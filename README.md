@@ -14,11 +14,11 @@ This is the research code for the WACV2024 paper "Complementary-Contradictory Fe
 
 We propose a method to mitigate multimodal overfitting in classification tasks. For example, in an emotion recognition task, RGB video frames and audio signals are used to predict the actor's emotion. In the vanilla classification setting, multimodal features (fusing the visual modality with audio) performs worse than the visual-only unimodal features.
 
-![Multimodal overfitting](overfitting.png "Example of multimodal overfitting")
+<img src="overfitting.png" alt="Example of multimodal overfitting" width="30%" height="auto">
 
 By learning a masking operation on the multimodal features, obtrusive information (contradictory) is removed, and only the essential information (complementary) is used for classification.
 
-![CM-VQVAE overview](overview.png "Overview of our CM-VQVAE")
+<img src="overview.png" alt="Overview of our CM-VQVAE" width="40%" height="auto">
 
 Here we provide the implementation ready-to-run for the emotion recognition dataset CREMA-D (see the manual on datasets/CREMA-D/README.md for obtaining the dataset). Running the file [CM-VQVAE/CREMA-D/main.py](CM-VQVAE/CREMA-D/main.py) as below provides the experimental results for training/validation and test.
 
